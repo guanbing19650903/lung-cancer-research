@@ -1,0 +1,354 @@
+\documentclass[12pt,a4paper]{article}
+
+% ==================== 基础宏包 ====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{longtable}
+
+% ==================== 中文支持 ====================
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{SimHei}
+
+% ==================== 页面设置 ====================
+\geometry{left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm}
+\onehalfspacing
+
+% ==================== 页眉页脚 ====================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{肺癌靶向治疗耐药机制研究}
+\fancyhead[R]{2026}
+\fancyfoot[C]{\thepage}
+
+% ==================== 超链接设置 ====================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    urlcolor=cyan!60!black,
+    citecolor=blue!60!black,
+}
+
+% ==================== 标题格式 ====================
+\titleformat{\section}{\large\bfseries\heiti}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries\heiti}{\thesubsection}{1em}{}
+
+% ==================== 文档信息 ====================
+\title{\heiti\Large 肺癌靶向治疗耐药机制研究：\\[0.5em] EGFR/ALK/ROS1 靶向药物耐药机制与克服策略}
+
+\author{
+    \normalsize 作者姓名$^{1,*}$ \quad 合作者$^{1}$ \quad 通讯作者$^{1,2}$ \\[0.5em]
+    \normalsize $^{1}$机构名称，城市，国家 \\
+    \normalsize $^{2}$通讯地址，邮箱 \\[0.5em]
+    \normalsize * 通讯作者：email@example.com
+}
+
+\date{\today}
+
+% ==================== 摘要环境 ====================
+\newenvironment{chineseabstract}
+    {\begin{center}\begin{minipage}{0.9\textwidth}
+     \section*{摘要}
+     \addcontentsline{toc}{section}{摘要}}
+    {\end{minipage}\end{center}}
+
+\newenvironment{englishabstract}
+    {\begin{center}\begin{minipage}{0.9\textwidth}
+     \section*{Abstract}
+     \addcontentsline{toc}{section}{Abstract}}
+    {\end{minipage}\end{center}}
+
+% ==================== 开始文档 ====================
+\begin{document}
+
+% ==================== 标题页 ====================
+\maketitle
+
+% ==================== 中文摘要 ====================
+\begin{chineseabstract}
+\noindent
+\textbf{背景}：肺癌是全球癌症相关死亡的首要原因。非小细胞肺癌（NSCLC）占肺癌病例的 85\%，其中 EGFR 突变和 ALK 融合是最主要的致癌驱动因素。尽管第三代靶向药物显著改善了患者预后，但获得性耐药仍是临床治疗的主要挑战。
+
+\textbf{方法}：本综述系统检索和分析了 PubMed、Embase、Cochrane 图书馆等数据库中关于肺癌靶向治疗耐药机制的文献，重点关注 2020-2026 年发表的研究。
+
+\textbf{结果}：我们系统总结了 EGFR、ALK、ROS1 靶向药物耐药的主要分子机制：（1）EGFR-TKI 耐药：获得性突变（T790M、C797S）、旁路激活（MET 扩增）、组织学转化；（2）ALK 抑制剂耐药：激酶结构域突变（G1202R、L1196M）、复合突变、旁路激活；（3）ROS1 抑制剂耐药：G2032R 溶剂前沿突变、旁路激活。我们进一步总结了克服耐药的治疗策略。
+
+\textbf{结论}：肺癌靶向治疗耐药是一个复杂且动态演变的过程。疾病进展时进行重复分子检测，根据耐药机制选择针对性治疗方案，是改善患者预后的关键。
+
+\vspace{1em}
+\noindent\textbf{关键词}：非小细胞肺癌；EGFR；ALK；靶向治疗；耐药机制；联合治疗
+\end{chineseabstract}
+
+% ==================== 英文摘要 ====================
+\begin{englishabstract}
+\noindent
+\textbf{Background}: Lung cancer is the leading cause of cancer-related mortality worldwide. Non-small cell lung cancer (NSCLC) accounts for 85\% of lung cancer cases, with EGFR mutations and ALK fusions being the predominant oncogenic drivers. Despite significant improvements in patient outcomes with third-generation targeted therapies, acquired resistance remains a major clinical challenge.
+
+\textbf{Methods}: This review systematically searched and analyzed literature on resistance mechanisms to targeted therapy in lung cancer from PubMed, Embase, and Cochrane Library databases, with a focus on studies published between 2020 and 2026.
+
+\textbf{Results}: We systematically summarized the major molecular mechanisms of resistance to EGFR, ALK, and ROS1 targeted therapies: (1) EGFR-TKI resistance: acquired mutations (T790M, C797S), bypass activation (MET amplification), histological transformation; (2) ALK inhibitor resistance: kinase domain mutations (G1202R, L1196M), compound mutations, bypass activation; (3) ROS1 inhibitor resistance: G2032R solvent-front mutation, bypass activation.
+
+\textbf{Conclusions}: Resistance to targeted therapy in lung cancer is a complex and dynamically evolving process. Repeat molecular testing at disease progression and selection of targeted treatment based on resistance mechanisms are key to improving patient outcomes.
+
+\vspace{1em}
+\noindent\textbf{Keywords}: Non-small cell lung cancer; EGFR; ALK; Targeted therapy; Resistance mechanism; Combination therapy
+\end{englishabstract}
+
+% ==================== 目录 ====================
+\newpage
+\tableofcontents
+\newpage
+
+% ==================== 第一章 ====================
+\section{引言}
+
+\subsection{肺癌疾病负担}
+
+肺癌是全球范围内发病率和死亡率最高的恶性肿瘤之一。根据最新统计数据：
+\begin{itemize}
+    \item 全球每年新发肺癌病例约 220 万
+    \item 肺癌相关死亡约 180 万
+    \item 非小细胞肺癌（NSCLC）占所有肺癌的 85\%
+\end{itemize}
+
+\subsection{靶向治疗的发展历程}
+
+肺癌治疗经历了从化疗到靶向治疗的范式转变。
+
+\begin{table}[H]
+\centering
+\caption{EGFR 和 ALK 抑制剂发展历程}
+\label{tab:tki-evolution}
+\begin{tabular}{cccc}
+\toprule
+\textbf{代别} & \textbf{EGFR-TKI} & \textbf{ALK 抑制剂} & \textbf{主要特点} \\
+\midrule
+第一代 & 吉非替尼、厄洛替尼 & 克唑替尼 & 可逆性结合，PFS 8-12 个月 \\
+第二代 & 阿法替尼、达可替尼 & 塞瑞替尼 & 不可逆结合，PFS 10-16 个月 \\
+第三代 & 奥希替尼 & 阿来替尼、布格替尼、洛拉替尼 & 克服 T790M 耐药，PFS 18-34 个月 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{耐药问题的临床挑战}
+
+尽管靶向治疗显著延长了患者生存期，但几乎所有患者最终都会出现疾病进展：
+\begin{itemize}
+    \item \textbf{EGFR 突变患者}：中位 PFS 18-19 个月（奥希替尼一线治疗）
+    \item \textbf{ALK 融合患者}：中位 PFS 34 个月（阿来替尼一线治疗）
+\end{itemize}
+
+% ==================== 第二章 ====================
+\section{EGFR-TKI 耐药机制}
+
+\subsection{EGFR 突变概述}
+
+EGFR 突变是 NSCLC 最常见的驱动基因改变：
+\begin{itemize}
+    \item \textbf{外显子 19 缺失（19del）}：约 45\%
+    \item \textbf{外显子 21 L858R 点突变}：约 40\%
+    \item \textbf{罕见突变}：G719X、S768I、L861Q 等
+\end{itemize}
+
+\subsection{第一代/第二代 TKI 耐药机制}
+
+\subsubsection{T790M 突变（"看门人"突变）}
+\begin{itemize}
+    \item \textbf{发生率}：约 50-60\% 一代/二代 TKI 耐药患者
+    \item \textbf{机制}：苏氨酸→甲硫氨酸替换，增加 ATP 亲和力
+    \item \textbf{临床意义}：第三代 TKI（奥希替尼）的开发靶点
+\end{itemize}
+
+\subsubsection{旁路激活}
+\begin{itemize}
+    \item MET 扩增：5-10\%
+    \item HER2 扩增/突变：3-5\%
+    \item PIK3CA 突变：5-7\%
+\end{itemize}
+
+\subsection{第三代 TKI（奥希替尼）耐药机制}
+
+\subsubsection{EGFR 依赖性耐药（约 30-40\%）}
+\begin{itemize}
+    \item \textbf{C797S 突变}：最常见，破坏奥希替尼共价结合
+    \item \textbf{其他突变}：L718Q、G796S、E709X 等
+\end{itemize}
+
+\subsubsection{旁路激活（约 20-30\%）}
+\begin{itemize}
+    \item MET 扩增：15-20\%，最常见旁路机制
+    \item HER2 扩增：5-7\%
+    \item KRAS 突变：3-5\%
+\end{itemize}
+
+% ==================== 第三章 ====================
+\section{ALK 抑制剂耐药机制}
+
+\subsection{ALK 融合概述}
+
+ALK 融合是 NSCLC 的重要驱动基因：
+\begin{itemize}
+    \item \textbf{发生率}：约 3-7\% NSCLC 患者
+    \item \textbf{最常见融合}：EML4-ALK（约 80\%）
+\end{itemize}
+
+\subsection{耐药机制分类}
+
+\subsubsection{ALK 激酶结构域突变（约 30-50\%）}
+
+\textbf{克唑替尼耐药}：L1196M（约 30\%）、G1269A（约 15\%）
+
+\textbf{阿来替尼耐药}：I1171N/T/S（约 25\%）、V1180L（约 15\%）、G1202R（约 10\%）
+
+\textbf{洛拉替尼耐药}：G1202R（最常见）、复合突变
+
+\subsubsection{最新功能图谱研究（2026）}
+
+Oh 等（Genome Biol 2026）使用 prime editing 系统评估了 3,208 个 ALK 变异。
+
+\textbf{关键发现}：
+\begin{itemize}
+    \item 验证已知耐药突变（G1202R、L1196M）
+    \item 识别新的耐药相关 VUS
+    \item 揭示药物特异性和共享耐药模式
+\end{itemize}
+
+% ==================== 第四章 ====================
+\section{ROS1 抑制剂耐药机制}
+
+\subsection{ROS1 融合概述}
+
+\begin{itemize}
+    \item \textbf{发生率}：约 1-2\% NSCLC 患者
+    \item \textbf{常见融合伙伴}：CD74、SLC34A2、TPM3
+\end{itemize}
+
+\subsection{耐药机制}
+
+\subsubsection{ROS1 激酶结构域突变}
+\begin{itemize}
+    \item \textbf{G2032R}：最常见（约 40\%），溶剂前沿突变
+    \item D2033N：约 10\%
+    \item L2086F：约 5\%
+\end{itemize}
+
+\subsubsection{旁路激活}
+\begin{itemize}
+    \item EGFR 激活：约 15\%
+    \item KRAS 突变：约 10\%
+\end{itemize}
+
+% ==================== 第五章 ====================
+\section{克服耐药的治疗策略}
+
+\subsection{新一代抑制剂开发}
+
+\subsubsection{EGFR 第四代 TKI}
+\begin{itemize}
+    \item \textbf{BLU-945}：靶向 C797S 突变
+    \item \textbf{BBT-176}：中国自主研发
+    \item \textbf{TQB3804}：中国自主研发
+\end{itemize}
+
+\subsubsection{ALK 新一代抑制剂}
+\begin{itemize}
+    \item \textbf{Zotizalkib（TPX-0131）}：对 G1202R 和复合突变有效
+\end{itemize}
+
+\subsection{联合治疗策略}
+
+\subsubsection{EGFR-TKI + MET-TKI}
+
+基于 2025 年 Meta 分析（Hu et al., BMC Cancer 2025）：
+\begin{itemize}
+    \item \textbf{方案}：奥希替尼 + 卡马替尼/替泊替尼/赛沃替尼
+    \item \textbf{ORR}：约 50-60\%
+\end{itemize}
+
+\subsubsection{EGFR-TKI + 抗血管生成}
+\begin{itemize}
+    \item \textbf{方案}：奥希替尼 + 贝伐珠单抗/雷莫芦单抗
+    \item \textbf{PFS 获益}：约 3-4 个月
+\end{itemize}
+
+\subsection{基于耐药机制的精准治疗}
+
+\begin{table}[H]
+\centering
+\caption{基于耐药机制的分层治疗策略}
+\label{tab:precision-treatment}
+\begin{tabular}{p{4cm}p{6cm}}
+\toprule
+\textbf{耐药机制} & \textbf{推荐策略} \\
+\midrule
+EGFR C797S（反式） & 一代 + 三代 TKI 联合 \\
+EGFR C797S（顺式） & 第四代 TKI 或化疗 \\
+MET 扩增 & EGFR-TKI + MET-TKI \\
+小细胞转化 & 铂类 + 依托泊苷 \\
+ALK G1202R & 洛拉替尼或 Zotizalkib \\
+ALK 复合突变 & Zotizalkib 或临床试验 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ==================== 第六章 ====================
+\section{未来展望与挑战}
+
+\subsection{未满足的临床需求}
+
+\begin{enumerate}
+    \item \textbf{C797S 顺式突变}：缺乏有效靶向药物
+    \item \textbf{复合耐药机制}：多重旁路激活
+    \item \textbf{中枢神经系统转移}：血脑屏障穿透性不足
+    \item \textbf{罕见突变}：缺乏针对性药物
+\end{enumerate}
+
+\subsection{研究方向}
+
+\begin{enumerate}
+    \item \textbf{第四代/第五代 TKI 开发}
+    \item \textbf{联合治疗优化}：最佳组合、剂量、时序
+    \item \textbf{生物标志物开发}：预测治疗响应
+    \item \textbf{免疫微环境调控}：克服免疫逃逸
+\end{enumerate}
+
+% ==================== 第七章 ====================
+\section{结论}
+
+肺癌靶向治疗耐药是一个复杂且动态演变的过程。
+
+\textbf{关键要点}：
+\begin{enumerate}
+    \item \textbf{耐药机制具有异质性}：同一患者可能同时存在多种耐药机制
+    \item \textbf{动态演变}：耐药机制随治疗线数变化
+    \item \textbf{精准检测是关键}：需要全面的分子检测指导治疗
+    \item \textbf{联合治疗是趋势}：单一药物难以克服复杂耐药
+\end{enumerate}
+
+\textbf{临床建议}：
+\begin{itemize}
+    \item 疾病进展时进行重复分子检测（组织或液体活检）
+    \item 根据耐药机制选择针对性治疗方案
+    \item 鼓励参与临床试验，探索新疗法
+\end{itemize}
+
+% ==================== 参考文献 ====================
+\newpage
+\bibliographystyle{plain}
+\bibliography{references_expanded}
+
+\end{document}
